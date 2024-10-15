@@ -51,7 +51,7 @@ RUN() {
         fi
 
         export HOST_CACHE_LIMIT_ENV=$((($HOSTCACHESIZE)*1024*1024*1024))
-        numactl --physcpubind=0-15,32-47 --membind=0 $MICROBENCH/build/test_smart_cache_posix_host $2 4096 $1 $3 $1 | tee $output/result.txt 
+        numactl --physcpubind=0-31 --membind=0 $MICROBENCH/build/test_smart_cache_posix_host $2 4096 $1 $3 $1 | tee $output/result.txt 
         #valgrind --tool=memcheck --leak-check=full $MICROBENCH/build/test_smart_cache_posix_host $2 4096 $1 $3 $1 #| tee $output/result.txt 
         #sudo perf record -F 99 $MICROBENCH/build/test_smart_cache_posix_host $2 4096 $1 $3 $1 #| tee $output/result.txt 
         #cat $output/result.txt

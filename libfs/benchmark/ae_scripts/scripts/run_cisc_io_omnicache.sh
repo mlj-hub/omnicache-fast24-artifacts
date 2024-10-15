@@ -46,7 +46,7 @@ RUN() {
 
         export HOST_CACHE_LIMIT_ENV=$((($HOSTCACHESIZE)*1024*1024*1024))
         export DEV_CACHE_LIMIT_ENV=$((($DEVCACHESIZE)*1024*1024*1024))
-        numactl --physcpubind=0-15,32-47 --membind=0  $MICROBENCH/build/test_smart_cache_cisc_hybrid $2 4096 $1 $3 $1 &> $output/result.txt 
+        numactl --physcpubind=0-31 --membind=0  $MICROBENCH/build/test_smart_cache_cisc_hybrid $2 4096 $1 $3 $1 &> $output/result.txt 
 	$LIBFS/crfsexit
         unset HOST_CACHE_LIMIT_ENV
         unset DEV_CACHE_LIMIT_ENV

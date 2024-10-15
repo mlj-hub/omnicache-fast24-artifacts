@@ -44,7 +44,7 @@ RUN() {
         fi
 
         export HOST_CACHE_LIMIT_ENV=$((($HOSTCACHESIZE)*1024*1024*1024))
-        numactl --physcpubind=0-15,32-47 --membind=0 $MICROBENCH/build/test_smart_cache_posix_host_seq $2 1024 $1 $3 $1 | tee $output/result.txt 
+        numactl --physcpubind=0-31 --membind=0 $MICROBENCH/build/test_smart_cache_posix_host_seq $2 1024 $1 $3 $1 | tee $output/result.txt 
         #$MICROBENCH/build/test_smart_cache_posix_host $2 1024 $1 $3 $1 | tee $output/result.txt 
 	$LIBFS/crfsexit
         unset HOST_CACHE_LIMIT_ENV

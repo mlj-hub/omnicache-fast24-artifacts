@@ -1,0 +1,5 @@
+memalign successful, req_size: 4297064448
+cxl memory init successful
+Benchmark takes 9.78 s, average thruput 3.44 GB/s
+Benchmark completed 
+free cxl memory

@@ -1,0 +1,2 @@
+Benchmark takes 11.04 s, average thruput 2.95 GB/s
+Benchmark completed 

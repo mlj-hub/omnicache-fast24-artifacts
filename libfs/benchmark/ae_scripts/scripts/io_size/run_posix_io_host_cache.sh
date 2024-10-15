@@ -37,7 +37,7 @@ RUN() {
         fi
 
         export HOST_CACHE_LIMIT_ENV=$((($HOSTCACHESIZE)*1024*1024*1024))
-         numactl --physcpubind=0-15,32-47 --membind=0 $MICROBENCH/build/test_smart_cache_posix_host $2 $1 $FILENUM $FILESIZE $FILENUM &> $output/result.txt #&> $RESULTDIR/"fusionfs_cachesize_"$2"_threads_"$1"_filenum_"$FILENUM"_filesize_"$FILESIZE".txt" 
+         numactl --physcpubind=0-31 --membind=0 $MICROBENCH/build/test_smart_cache_posix_host $2 $1 $FILENUM $FILESIZE $FILENUM &> $output/result.txt #&> $RESULTDIR/"fusionfs_cachesize_"$2"_threads_"$1"_filenum_"$FILENUM"_filesize_"$FILESIZE".txt" 
         unset HOST_CACHE_LIMIT_ENV
         sleep 2
 }

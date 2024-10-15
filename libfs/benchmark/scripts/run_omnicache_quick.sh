@@ -35,7 +35,7 @@ RUN() {
     export DEV_CACHE_LIMIT_ENV=$((($DEVCACHESIZE)*1024*1024*1024))
  
 
-    numactl --physcpubind=0-15,32-47 $MICROBENCH/build/test_smart_cache_posix_hybrid $2 4096 $1 $FILESIZE $FILENUM  
+    numactl --physcpubind=0-31 $MICROBENCH/build/test_smart_cache_posix_hybrid $2 4096 $1 $FILESIZE $FILENUM  
     sleep 2
 
     unset HOST_CACHE_LIMIT_ENV

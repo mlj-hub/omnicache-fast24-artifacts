@@ -1,0 +1,2 @@
+Benchmark takes 12.88 s, average thruput 2.97 GB/s
+Benchmark completed 

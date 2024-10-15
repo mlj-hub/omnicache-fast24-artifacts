@@ -46,7 +46,7 @@ RUN() {
         export HOST_CACHE_LIMIT_ENV=$((($1)*($HOSTCACHESIZE)*1024*1024*1024))
         export DEV_CACHE_LIMIT_ENV=$((($DEVCACHESIZE)*1024*1024*1024))
 
-        numactl --physcpubind=0-15,32-47 --membind=0  $MICROBENCH/build/test_smart_cache_posix_hybrid $2 4096 $FILENUM $FILESIZE $FILENUM  &> $output/result.txt 
+        numactl --physcpubind=0-31 --membind=0  $MICROBENCH/build/test_smart_cache_posix_hybrid $2 4096 $FILENUM $FILESIZE $FILENUM  &> $output/result.txt 
 
         sleep 2
 
