@@ -1,0 +1,988 @@
+++ export AERESULTDIR=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs
+++ AERESULTDIR=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs
+++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/ae_scripts/scripts/run_posix_io_fusionfs.sh
++++ PARAFS=/users/mljwbxy/ssd/omnicache-fast24-artifacts
++++ DBPATH=/mnt/ram
++++ FILENUM=1
++++ FILESIZE=(32*1024)
++++ workloadarr=("randread" "randwrite" "seqread" "seqwrite")
++++ declare -a workloadarr
++++ workloadidarr=("0" "1")
++++ declare -a workloadidarr
++++ threadarr=("1" "4" "16" "32")
++++ declare -a threadarr
++++ '[' '!' -d '' ']'
++++ mkdir -p
+mkdir: missing operand
+Try 'mkdir --help' for more information.
++++ for workloadid in "${workloadidarr[@]}"
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=32768
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile16 /mnt/ram/testfile17 /mnt/ram/testfile18 /mnt/ram/testfile19 /mnt/ram/testfile2 /mnt/ram/testfile20 /mnt/ram/testfile21 /mnt/ram/testfile22 /mnt/ram/testfile23 /mnt/ram/testfile24 /mnt/ram/testfile25 /mnt/ram/testfile26 /mnt/ram/testfile27 /mnt/ram/testfile28 /mnt/ram/testfile29 /mnt/ram/testfile3 /mnt/ram/testfile30 /mnt/ram/testfile31 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 1 0 32768
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/1
++++ echo /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/1
+/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/1
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/1 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/1
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_direct_posix_io 0 4096 1 32768 1
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=8192
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 4 0 8192
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/4
++++ echo /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/4
+/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/4
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/4 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/4
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_direct_posix_io 0 4096 4 8192 4
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=2048
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile2 /mnt/ram/testfile3
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 16 0 2048
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/16
++++ echo /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/16
+/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/16
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/16 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/16
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_direct_posix_io 0 4096 16 2048 16
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=1024
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile2 /mnt/ram/testfile3 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 32 0 1024
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/32
++++ echo /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/32
+/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/32
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/32 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randread/32
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_direct_posix_io 0 4096 32 1024 32
++++ sleep 2
++++ for workloadid in "${workloadidarr[@]}"
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=32768
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile16 /mnt/ram/testfile17 /mnt/ram/testfile18 /mnt/ram/testfile19 /mnt/ram/testfile2 /mnt/ram/testfile20 /mnt/ram/testfile21 /mnt/ram/testfile22 /mnt/ram/testfile23 /mnt/ram/testfile24 /mnt/ram/testfile25 /mnt/ram/testfile26 /mnt/ram/testfile27 /mnt/ram/testfile28 /mnt/ram/testfile29 /mnt/ram/testfile3 /mnt/ram/testfile30 /mnt/ram/testfile31 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 1 1 32768
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/1
++++ echo /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/1
+/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/1
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/1 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/1
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_direct_posix_io 1 4096 1 32768 1
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=8192
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 4 1 8192
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/4
++++ echo /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/4
+/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/4
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/4 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/4
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_direct_posix_io 1 4096 4 8192 4
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=2048
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile2 /mnt/ram/testfile3
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 16 1 2048
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/16
++++ echo /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/16
+/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/16
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/16 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/16
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_direct_posix_io 1 4096 16 2048 16
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=1024
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile2 /mnt/ram/testfile3 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 32 1 1024
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/32
++++ echo /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/32
+/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/32
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/32 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/fusionfs/randwrite/32
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_direct_posix_io 1 4096 32 1024 32
++++ sleep 2
+++ sleep 5
+++ export AERESULTDIR=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache
+++ AERESULTDIR=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache
+++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/ae_scripts/scripts/run_posix_io_host_cache.sh
++++ PARAFS=/users/mljwbxy/ssd/omnicache-fast24-artifacts
++++ DBPATH=/mnt/ram
++++ FILENUM=4
++++ FILESIZE=(32*1024)
++++ HOSTCACHESIZE=16
++++ workloadarr=("randread" "randwrite" "seqread" "seqwrite")
++++ declare -a workloadarr
++++ workloadidarr=("0" "1")
++++ declare -a workloadidarr
++++ threadarr=("1" "4" "16" "32")
++++ declare -a threadarr
++++ '[' '!' -d '' ']'
++++ mkdir -p
+mkdir: missing operand
+Try 'mkdir --help' for more information.
++++ for workloadid in "${workloadidarr[@]}"
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=32768
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile16 /mnt/ram/testfile17 /mnt/ram/testfile18 /mnt/ram/testfile19 /mnt/ram/testfile2 /mnt/ram/testfile20 /mnt/ram/testfile21 /mnt/ram/testfile22 /mnt/ram/testfile23 /mnt/ram/testfile24 /mnt/ram/testfile25 /mnt/ram/testfile26 /mnt/ram/testfile27 /mnt/ram/testfile28 /mnt/ram/testfile29 /mnt/ram/testfile3 /mnt/ram/testfile30 /mnt/ram/testfile31 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 1 0 32768
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/1
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/1 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/1
++++ export HOST_CACHE_LIMIT_ENV=17179869184
++++ HOST_CACHE_LIMIT_ENV=17179869184
++++ numactl --physcpubind=0-31 --membind=0 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_host 0 4096 1 32768 1
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/1/result.txt
+Benchmark takes 46.33 s, average thruput 0.69 GB/s
+Benchmark completed 
++++ unset HOST_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=8192
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 4 0 8192
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/4
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/4 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/4
++++ export HOST_CACHE_LIMIT_ENV=17179869184
++++ HOST_CACHE_LIMIT_ENV=17179869184
++++ numactl --physcpubind=0-31 --membind=0 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_host 0 4096 4 8192 4
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/4/result.txt
+Benchmark takes 31.87 s, average thruput 1.03 GB/s
+Benchmark completed 
++++ unset HOST_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=2048
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile2 /mnt/ram/testfile3
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 16 0 2048
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/16
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/16 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/16
++++ export HOST_CACHE_LIMIT_ENV=17179869184
++++ HOST_CACHE_LIMIT_ENV=17179869184
++++ numactl --physcpubind=0-31 --membind=0 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_host 0 4096 16 2048 16
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/16/result.txt
+Benchmark takes 21.41 s, average thruput 1.51 GB/s
+Benchmark completed 
++++ unset HOST_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=1024
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile2 /mnt/ram/testfile3 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 32 0 1024
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/32
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/32 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/32
++++ export HOST_CACHE_LIMIT_ENV=17179869184
++++ HOST_CACHE_LIMIT_ENV=17179869184
++++ numactl --physcpubind=0-31 --membind=0 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_host 0 4096 32 1024 32
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randread/32/result.txt
+Benchmark takes 18.49 s, average thruput 1.76 GB/s
+Benchmark completed 
++++ unset HOST_CACHE_LIMIT_ENV
++++ sleep 2
++++ for workloadid in "${workloadidarr[@]}"
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=32768
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile16 /mnt/ram/testfile17 /mnt/ram/testfile18 /mnt/ram/testfile19 /mnt/ram/testfile2 /mnt/ram/testfile20 /mnt/ram/testfile21 /mnt/ram/testfile22 /mnt/ram/testfile23 /mnt/ram/testfile24 /mnt/ram/testfile25 /mnt/ram/testfile26 /mnt/ram/testfile27 /mnt/ram/testfile28 /mnt/ram/testfile29 /mnt/ram/testfile3 /mnt/ram/testfile30 /mnt/ram/testfile31 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 1 1 32768
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/1
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/1 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/1
++++ export HOST_CACHE_LIMIT_ENV=17179869184
++++ HOST_CACHE_LIMIT_ENV=17179869184
++++ numactl --physcpubind=0-31 --membind=0 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_host 1 4096 1 32768 1
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/1/result.txt
+Benchmark takes 51.94 s, average thruput 0.62 GB/s
+Benchmark completed 
++++ unset HOST_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=8192
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 4 1 8192
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/4
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/4 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/4
++++ export HOST_CACHE_LIMIT_ENV=17179869184
++++ HOST_CACHE_LIMIT_ENV=17179869184
++++ numactl --physcpubind=0-31 --membind=0 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_host 1 4096 4 8192 4
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/4/result.txt
+Benchmark takes 40.69 s, average thruput 0.79 GB/s
+Benchmark completed 
++++ unset HOST_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=2048
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile2 /mnt/ram/testfile3
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 16 1 2048
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/16
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/16 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/16
++++ export HOST_CACHE_LIMIT_ENV=17179869184
++++ HOST_CACHE_LIMIT_ENV=17179869184
++++ numactl --physcpubind=0-31 --membind=0 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_host 1 4096 16 2048 16
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/16/result.txt
+Benchmark takes 22.31 s, average thruput 1.45 GB/s
+Benchmark completed 
++++ unset HOST_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=1024
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile2 /mnt/ram/testfile3 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 32 1 1024
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/32
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/32 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/32
++++ export HOST_CACHE_LIMIT_ENV=17179869184
++++ HOST_CACHE_LIMIT_ENV=17179869184
++++ numactl --physcpubind=0-31 --membind=0 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_host 1 4096 32 1024 32
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/hostcache/randwrite/32/result.txt
+Benchmark takes 19.05 s, average thruput 1.70 GB/s
+Benchmark completed 
++++ unset HOST_CACHE_LIMIT_ENV
++++ sleep 2
+++ sleep 5
+++ export AERESULTDIR=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache
+++ AERESULTDIR=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache
+++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/ae_scripts/scripts/run_posix_omnicache.sh
++++ PARAFS=/users/mljwbxy/ssd/omnicache-fast24-artifacts
++++ DBPATH=/mnt/ram
++++ FILENUM=8
++++ FILESIZE=(32*1024)
++++ HOSTCACHESIZE=12
++++ DEVCACHESIZE=4
++++ workloadarr=("randread" "randwrite" "seqread" "seqwrite")
++++ declare -a workloadarr
++++ workloadidarr=("0" "1")
++++ declare -a workloadidarr
++++ threadarr=("1" "4" "16" "32")
++++ declare -a threadarr
++++ '[' '!' -d '' ']'
++++ mkdir -p
+mkdir: missing operand
+Try 'mkdir --help' for more information.
++++ for workloadid in "${workloadidarr[@]}"
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=32768
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile16 /mnt/ram/testfile17 /mnt/ram/testfile18 /mnt/ram/testfile19 /mnt/ram/testfile2 /mnt/ram/testfile20 /mnt/ram/testfile21 /mnt/ram/testfile22 /mnt/ram/testfile23 /mnt/ram/testfile24 /mnt/ram/testfile25 /mnt/ram/testfile26 /mnt/ram/testfile27 /mnt/ram/testfile28 /mnt/ram/testfile29 /mnt/ram/testfile3 /mnt/ram/testfile30 /mnt/ram/testfile31 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 1 0 32768
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/1
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/1 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/1
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid 0 4096 1 32768 1
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/1/result.txt
+Benchmark takes 22.66 s, average thruput 1.41 GB/s
+Benchmark completed 
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=8192
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 4 0 8192
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/4
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/4 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/4
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid 0 4096 4 8192 4
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/4/result.txt
+Benchmark takes 10.65 s, average thruput 3.17 GB/s
+Benchmark completed 
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=2048
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile2 /mnt/ram/testfile3
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 16 0 2048
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/16
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/16 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/16
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid 0 4096 16 2048 16
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/16/result.txt
+Benchmark takes 11.38 s, average thruput 2.86 GB/s
+Benchmark completed 
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=1024
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile2 /mnt/ram/testfile3 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 32 0 1024
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/32
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/32 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/32
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid 0 4096 32 1024 32
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randread/32/result.txt
+Benchmark takes 11.43 s, average thruput 2.88 GB/s
+Benchmark completed 
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for workloadid in "${workloadidarr[@]}"
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=32768
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile16 /mnt/ram/testfile17 /mnt/ram/testfile18 /mnt/ram/testfile19 /mnt/ram/testfile2 /mnt/ram/testfile20 /mnt/ram/testfile21 /mnt/ram/testfile22 /mnt/ram/testfile23 /mnt/ram/testfile24 /mnt/ram/testfile25 /mnt/ram/testfile26 /mnt/ram/testfile27 /mnt/ram/testfile28 /mnt/ram/testfile29 /mnt/ram/testfile3 /mnt/ram/testfile30 /mnt/ram/testfile31 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 1 1 32768
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/1
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/1 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/1
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid 1 4096 1 32768 1
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/1/result.txt
+Benchmark takes 20.68 s, average thruput 1.55 GB/s
+Benchmark completed 
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=8192
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 4 1 8192
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/4
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/4 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/4
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid 1 4096 4 8192 4
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/4/result.txt
+Benchmark takes 8.90 s, average thruput 3.86 GB/s
+Benchmark completed 
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=2048
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile2 /mnt/ram/testfile3
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 16 1 2048
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/16
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/16 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/16
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid 1 4096 16 2048 16
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/16/result.txt
+Benchmark takes 11.29 s, average thruput 2.88 GB/s
+Benchmark completed 
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=1024
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile2 /mnt/ram/testfile3 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 32 1 1024
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/32
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/32 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/32
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ tee /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicache/randwrite/32/result.txt
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid 1 4096 32 1024 32
+Benchmark takes 11.39 s, average thruput 2.91 GB/s
+Benchmark completed 
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
+++ sleep 5
+++ export AERESULTDIR=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl
+++ AERESULTDIR=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl
+++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/ae_scripts/scripts/run_posix_io_omnicache_cxl.sh
++++ PARAFS=/users/mljwbxy/ssd/omnicache-fast24-artifacts
++++ DBPATH=/mnt/ram
++++ FILENUM=1
++++ FILESIZE=(32*1024)
++++ HOSTCACHESIZE=12
++++ DEVCACHESIZE=4
++++ workloadarr=("randread" "randwrite")
++++ declare -a workloadarr
++++ workloadidarr=("0" "1")
++++ declare -a workloadidarr
++++ threadarr=("1" "4" "16" "32")
++++ declare -a threadarr
++++ '[' '!' -d '' ']'
++++ mkdir -p
+mkdir: missing operand
+Try 'mkdir --help' for more information.
++++ for workloadid in "${workloadidarr[@]}"
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=32768
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile16 /mnt/ram/testfile17 /mnt/ram/testfile18 /mnt/ram/testfile19 /mnt/ram/testfile2 /mnt/ram/testfile20 /mnt/ram/testfile21 /mnt/ram/testfile22 /mnt/ram/testfile23 /mnt/ram/testfile24 /mnt/ram/testfile25 /mnt/ram/testfile26 /mnt/ram/testfile27 /mnt/ram/testfile28 /mnt/ram/testfile29 /mnt/ram/testfile3 /mnt/ram/testfile30 /mnt/ram/testfile31 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 1 0 32768
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/1
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/1 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/1
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ numactl --physcpubind=0-31 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid_cxl 0 4096 1 32768 1
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=8192
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 4 0 8192
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/4
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/4 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/4
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ numactl --physcpubind=0-31 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid_cxl 0 4096 4 8192 4
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=2048
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile2 /mnt/ram/testfile3
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 16 0 2048
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/16
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/16 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/16
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ numactl --physcpubind=0-31 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid_cxl 0 4096 16 2048 16
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=1024
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile2 /mnt/ram/testfile3 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 32 0 1024
++++ workload=randread
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/32
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/32 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randread/32
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ numactl --physcpubind=0-31 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid_cxl 0 4096 32 1024 32
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for workloadid in "${workloadidarr[@]}"
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=32768
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile16 /mnt/ram/testfile17 /mnt/ram/testfile18 /mnt/ram/testfile19 /mnt/ram/testfile2 /mnt/ram/testfile20 /mnt/ram/testfile21 /mnt/ram/testfile22 /mnt/ram/testfile23 /mnt/ram/testfile24 /mnt/ram/testfile25 /mnt/ram/testfile26 /mnt/ram/testfile27 /mnt/ram/testfile28 /mnt/ram/testfile29 /mnt/ram/testfile3 /mnt/ram/testfile30 /mnt/ram/testfile31 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 1 1 32768
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/1
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/1 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/1
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ numactl --physcpubind=0-31 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid_cxl 1 4096 1 32768 1
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=8192
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 4 1 8192
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/4
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/4 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/4
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ numactl --physcpubind=0-31 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid_cxl 1 4096 4 8192 4
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=2048
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile2 /mnt/ram/testfile3
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 16 1 2048
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/16
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/16 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/16
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ numactl --physcpubind=0-31 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid_cxl 1 4096 16 2048 16
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
++++ for thrd in "${threadarr[@]}"
++++ per_thd_size=1024
++++ CLEAN
++++ rm -rf /mnt/ram/test /mnt/ram/testfile0 /mnt/ram/testfile1 /mnt/ram/testfile10 /mnt/ram/testfile11 /mnt/ram/testfile12 /mnt/ram/testfile13 /mnt/ram/testfile14 /mnt/ram/testfile15 /mnt/ram/testfile2 /mnt/ram/testfile3 /mnt/ram/testfile4 /mnt/ram/testfile5 /mnt/ram/testfile6 /mnt/ram/testfile7 /mnt/ram/testfile8 /mnt/ram/testfile9
++++ sudo killall db_bench
+db_bench: no process found
++++ sudo killall db_bench
+db_bench: no process found
++++ echo 'KILLING Rocksdb db_bench'
+KILLING Rocksdb db_bench
++++ /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/crfsexit
++++ FlushDisk
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ sudo sh -c sync
++++ sudo sh -c sync
++++ sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
++++ RUN 32 1 1024
++++ workload=randwrite
++++ output=/users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/32
++++ '[' '!' -d /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/32 ']'
++++ mkdir -p /users/mljwbxy/ssd/omnicache-fast24-artifacts/AE-RESULTS//microbench/figure11/omnicachecxl/randwrite/32
++++ export HOST_CACHE_LIMIT_ENV=12884901888
++++ HOST_CACHE_LIMIT_ENV=12884901888
++++ export DEV_CACHE_LIMIT_ENV=4294967296
++++ DEV_CACHE_LIMIT_ENV=4294967296
++++ numactl --physcpubind=0-31 /users/mljwbxy/ssd/omnicache-fast24-artifacts/libfs/benchmark/build/test_smart_cache_posix_hybrid_cxl 1 4096 32 1024 32
++++ unset HOST_CACHE_LIMIT_ENV
++++ unset DEV_CACHE_LIMIT_ENV
++++ sleep 2
