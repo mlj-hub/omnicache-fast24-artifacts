@@ -1,0 +1,30 @@
+-----------------------
+Table for ycsba
+-----------------------
+Threads,FusionFS,HostCache-user-level,OmniCache
+ycsba,71.3,85.0,86.1
+-----------------------
+Table for ycsbb
+-----------------------
+Threads,FusionFS,HostCache-user-level,OmniCache
+ycsbb,116.9,140.6,145.8
+-----------------------
+Table for ycsbc
+-----------------------
+Threads,FusionFS,HostCache-user-level,OmniCache
+ycsbc,184.9,243.0,235.2
+-----------------------
+Table for ycsbd
+-----------------------
+Threads,FusionFS,HostCache-user-level,OmniCache
+ycsbd,114.4,143.3,127.3
+-----------------------
+Table for ycsbe
+-----------------------
+Threads,FusionFS,HostCache-user-level,OmniCache
+ycsbe,1172.9,1954.6,2057.3
+-----------------------
+Table for ycsbf
+-----------------------
+Threads,FusionFS,HostCache-user-level,OmniCache
+ycsbf,66.6,80.6,79.6

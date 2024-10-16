@@ -1,0 +1,14 @@
+Keys:       16 bytes each
+Values:     1024 bytes each (512 bytes after compression)
+Entries:    200000
+RawSize:    198.4 MB (estimated)
+FileSize:   100.7 MB (estimated)
+WARNING: Snappy compression is not enabled
+------------------------------------------------
+load         :      12.205 micros/op;   81.3 MB/s
+ycsba        :      13.904 micros/op;   71.3 MB/s (100000 of 200000 found)
+ycsbb        :       8.488 micros/op;  116.9 MB/s (190000 of 200000 found)
+ycsbc        :       5.365 micros/op;  184.9 MB/s (200000 of 200000 found)
+ycsbf        :      14.888 micros/op;   66.6 MB/s (200000 of 200000 found)
+ycsbd        :       8.669 micros/op;  114.4 MB/s (190000 of 200000 found)
+ycsbe        :      40.252 micros/op; 1172.9 MB/s (47550 of 50000 found)
