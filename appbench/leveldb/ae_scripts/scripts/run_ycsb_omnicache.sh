@@ -47,7 +47,7 @@ RUN() {
         fi
 
         export LD_PRELOAD=$DEVFSCLIENT/libshim/shim_common.so
-        numactl --physcpubind=0-15,32-47 --membind=0  $LEVELDB/db_bench_omnicache --db=$DBPATH --benchmarks=$BENCHMARK --use_existing_db=0 --num=$KEYS --ycsb_ops_num=$KEYS --value_size=$2 --threads=$1 --open_files=256 | tee $output/result.txt
+        numactl --physcpubind=0-31 --membind=0  $LEVELDB/db_bench_omnicache --db=$DBPATH --benchmarks=$BENCHMARK --use_existing_db=0 --num=$KEYS --ycsb_ops_num=$KEYS --value_size=$2 --threads=$1 --open_files=256 | tee $output/result.txt
         export LD_PRELOAD=""
 
         unset PARAFSENV
