@@ -1,0 +1,16 @@
+-----------------------
+Table for seqread
+-----------------------
+Threads,FusionFS,HostCache-user-level,lambda-IO-emulate,OmniCache
+1,0.87,0.49,0.58,0.63
+4,3.33,2.02,2.64,3.38
+16,6.27,3.59,5.97,5.86
+32,4.45,4.4,5.49,7.05
+-----------------------
+Table for seqwrite
+-----------------------
+Threads,FusionFS,HostCache-user-level,lambda-IO-emulate,OmniCache
+1,0.8,0.45,0.32,0.38
+4,3.07,1.67,1.64,2.35
+16,3.39,3.81,4.3,10.8
+32,2.3,5.03,4.09,7.43
